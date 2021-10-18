@@ -1,0 +1,199 @@
+//colors
+$dark-grey: #212121;
+$violet: #6200ee;
+$dark-violet:#3700b3 ;
+
+$white: #f0f0f0;
+
+/* === GLOBAL === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+
+html {
+    font-size: 62.5%;
+
+    button {
+        cursor: pointer;
+    }
+}
+
+/* === MAIN === */
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: $dark-grey, $alpha: .95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    main {
+        width: min(60rem, 95%);
+        max-width: 144rem;
+        height: 40rem;
+        padding: 2rem 3rem;
+        border-radius: 16px;
+        margin: auto;
+        background-color: $dark-grey;
+        text-align: center;
+        }
+
+        section.main-menu {
+            width: 100%;
+            height: 100%;     
+            background-color: $dark-grey;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            .modal {
+                width: min(60rem, 95%);
+               
+                > h1 {
+                    font-size: 3.2rem;
+                }
+
+                .options {
+                    > button {
+
+                    display: block;
+                    width: 15rem;
+                    padding: 1rem;
+                    margin: 1rem auto;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: $violet;
+                    color: $white;
+                    font-size: 1.2rem;
+                    transition: .5s all;
+                    }
+                }
+            }
+           
+        }
+
+        section.champion-interface {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+
+            .close-window {
+                height: 2rem;
+
+                > img {
+                    cursor: pointer;
+                    transition: 1s all;
+                    border-radius: 8px;
+
+                    &:hover {
+                        transform: scale(1.5);
+                        background: rgb(236, 116, 116);
+                    }
+                }
+            }
+
+            .champions-data {
+                width: 100%;
+                height: 50%;
+                margin-top: -2rem;
+    
+                > h1 {
+                    font-size: 3.2rem;
+                    margin-bottom: 1.5rem;
+                }
+    
+                .lol-design {
+                    width: 15rem;
+                    height: 15rem;
+                    border: 12.5px solid $violet;
+                    border-radius: 8px;
+                }
+
+                .valorant-design {
+                    height: 100%;
+                }
+            }
+
+           .submit-area {
+            align-self: flex-end;
+            width: 100%;
+            //height: 8.64rem;
+    
+                #timer {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+    
+                button.sort-champion {
+                    display: block;
+                    width: 15rem;
+                    padding: 1rem;
+                    margin: 0 auto;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: $violet;
+                    color: $white;
+                    font-size: 1.2rem;
+                    transition: .5s all;
+    
+                    &:hover {
+                        background-color: $dark-violet;
+                        border: 1px solid $white;
+                        cursor: pointer;
+                    }
+                }
+    
+                button.sort-champion.disabled {
+                    cursor: not-allowed;
+                    background: gray;
+                }
+           }
+        }
+
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        main.main {
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+
+            justify-content: center;
+            align-items: center;
+
+            section.main-menu {
+                transition: 1.5s all;
+    
+                .modal {
+
+                    > h1 {
+                        font-size: 2.2rem;
+                    }
+                }      
+            }      
+
+            section.champion-interface {
+                justify-content: center;
+                align-items: center;
+
+                .submit-area {
+                    align-self: auto;
+                }
+            }
+        }
+    }
+}
