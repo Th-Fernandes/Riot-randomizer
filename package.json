@@ -1,6 +1,6 @@
 {
   "name": "lol-randomizer",
-  "version": "1.0.0",
+  "version": "0.3.2",
   "description": "escolha aleatóriamente um campeao no league of legends.",
   "main": "index.js",
   "type": "module",

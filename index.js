@@ -1,9 +1,10 @@
-import { championsList} from "./data/champions.js";
+import { championsList } from "./data/champions.js";
 import { agentsList } from './data/agents.js';
 
 
 const configs = {
     typeSelected: undefined,
+    timeCooldown: 120,
     //seleciona qul jogo será usado para fazer os sorteios
     type() {
         //seleciona lol
@@ -34,7 +35,7 @@ const configs = {
 
         if( configs.typeSelected == championsList) {
             onScreen.innerHTML = `
-            <h1 class="champion-name ">${champion.name}</h1>
+            <h1 class="champion-name">${champion.name}</h1>
             <img src="${champion.image}" alt="champion image" class="champion-image lol-design">
             `
        } else {
@@ -104,8 +105,11 @@ const mainMenu = {
             mainMenu.menu.style.visibility = "visible"
         }) 
     },
+
+    changeGame() {
+        // quando selecionar um jogo diferente, deve sumir os dados anteriores e mostrar os dados novos
+
+    }
 }
 
 export { configs, mainMenu }
-
-//console.log(sortChamp())
