@@ -46,6 +46,7 @@ body {
         }
 
         section.main-menu {
+            transition: 1.5s all;
             width: 100%;
             height: 100%;     
             background-color: $dark-grey;
@@ -186,7 +187,7 @@ body {
             align-items: center;
 
             section.main-menu {
-                transition: 1.5s all;
+                
     
                 .modal {
 

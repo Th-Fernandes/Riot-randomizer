@@ -35,6 +35,7 @@
   text-align: center;
 }
 :root body section.main-menu {
+  transition: 1.5s all;
   width: 100%;
   height: 100%;
   background-color: #212121;
@@ -144,9 +145,6 @@
     padding: 0;
     justify-content: center;
     align-items: center;
-  }
-  body main.main section.main-menu {
-    transition: 1.5s all;
   }
   body main.main section.main-menu .modal > h1 {
     font-size: 2.2rem;
