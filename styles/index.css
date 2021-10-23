@@ -62,6 +62,11 @@
   color: #f0f0f0;
   font-size: 1.2rem;
   transition: 0.5s all;
+  cursor: pointer;
+}
+:root body section.main-menu .modal .options button.choose-valorant {
+  background-color: gray;
+  cursor: not-allowed;
 }
 :root body section.champion-interface {
   display: flex;
@@ -90,10 +95,13 @@
   margin-bottom: 1.5rem;
 }
 :root body section.champion-interface .champions-data .lol-design {
-  width: 15rem;
-  height: 15rem;
-  border: 12.5px solid #6200ee;
-  border-radius: 8px;
+  width: 250px;
+  border: 5px solid #6200ee;
+  border-radius: 20px 20px 0 0;
+  transition: 1s all;
+}
+:root body section.champion-interface .champions-data .lol-design:hover {
+  transform: scale(1.04);
 }
 :root body section.champion-interface .champions-data .valorant-design {
   height: 100%;
@@ -146,6 +154,9 @@
   body main.main section.champion-interface {
     justify-content: center;
     align-items: center;
+  }
+  body main.main section.champion-interface .champions-data .champion-name {
+    transition: 4s all;
   }
   body main.main section.champion-interface .submit-area {
     align-self: auto;
